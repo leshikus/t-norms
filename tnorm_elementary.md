@@ -193,6 +193,32 @@ In the incident scenario $(t,a,\ldots,a)$, $\Gamma_n = h(t)/[(n-1)h(a)]$:
 | Hamacher | $\dfrac{a(\gamma+(1-\gamma)a)}{(n-1)t(\gamma+(1-\gamma)t)}$ |
 | Sugeno–Weber | $\dfrac{1+\lambda a}{(n-1)(1+\lambda t)}$ |
 
+---
+
+## $L_T$ and $\Gamma_n^*$ for each family
+
+By the reciprocity identity $L_T\cdot\Gamma_n^* = \frac{1}{n-1}$ (see `tnorm.md`), the two quantities are determined by whether $h$ is non-increasing. The infimum $\Gamma_n^* = \tfrac{1}{n-1}$ is approached as $a\to t^+$ (not attained); $\Gamma_n^*=0$ follows from $h(a)\to\infty$ along a boundary sequence.
+
+| Family | Parameter range | $L_T$ | $\Gamma_n^*$ |
+|--------|----------------|-------|-------------|
+| Łukasiewicz | — | 1 | $\dfrac{1}{n-1}$ |
+| Product | — | 1 | $\dfrac{1}{n-1}$ |
+| Schweizer–Sklar | $\lambda<0$ (strict); $0<\lambda\le 1$ (nilpotent) | 1 | $\dfrac{1}{n-1}$ |
+| Schweizer–Sklar | $\lambda>1$ (nilpotent) | $\infty$ | $0$ |
+| Yager | $\lambda\ge 1$ | 1 | $\dfrac{1}{n-1}$ |
+| Yager | $0<\lambda<1$ | $\infty$ | $0$ |
+| Aczel–Alsina | $\lambda\ge 1$ | 1 | $\dfrac{1}{n-1}$ |
+| Aczel–Alsina | $0<\lambda<1$ | $\infty$ | $0$ |
+| Dombi | $\lambda\ge 1$ | 1 | $\dfrac{1}{n-1}$ |
+| Dombi | $0<\lambda<1$ | $\infty$ | $0$ |
+| Frank | $s>0,\,s\ne 1$ | 1 | $\dfrac{1}{n-1}$ |
+| Hamacher | $\gamma\ge 0$ | 1 | $\dfrac{1}{n-1}$ |
+| Sugeno–Weber | $\lambda>0$ | 1 | $\dfrac{1}{n-1}$ |
+
+**Why $L_T=\infty$ in the bad cases:** for Yager/AA/Dombi with $\lambda<1$ and SS with $\lambda>1$, $h(x)\to\infty$ as $x\to 1^-$ (or $x\to 0^+$ for SS), while $T(x,y)\to y<1$ as $x\to 1^-$, so $h(x)/h(T)\to\infty$. Frank and Hamacher have $h$ globally decreasing for all valid parameters, giving $L_T=1$ unconditionally.
+
+---
+
 For **power-law profile** $h(x)=Cx^{-q}$ (the case $\Gamma$ depends only on ratio $a/t$): $\Gamma_n=\frac{1}{n-1}(a/t)^q$. This uniquely characterizes **Schweizer–Sklar** ($q=1-\lambda$).
 
 ---
